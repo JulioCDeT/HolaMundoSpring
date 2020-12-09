@@ -1,0 +1,22 @@
+# Server configuration
+
+server:
+  port: 8080
+  servlet:
+    context-path: /v2/helloworld/
+
+info:
+  app:
+    name: HelloWorld
+    description: Programa de ejemplo de spring
+    version: 1.0.0
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health, prometheus
+  endpoint:
+    info.enabled: true
+    health.enabled: true
+    prometheus.enabled: true
